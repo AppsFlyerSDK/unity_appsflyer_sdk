@@ -1,14 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
 
-
+    namespace 'com.appsflyer.unitywrapper'
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
+        targetSdkVersion 32
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -31,7 +29,9 @@ repositories {
 dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
     compileOnly 'androidx.appcompat:appcompat:1.1.0'
-    compileOnly 'com.appsflyer:af-android-sdk:6.15.0'
+    compileOnly 'com.appsflyer:af-android-sdk:6.15.2'
+    compileOnly 'com.appsflyer:purchase-connector:2.1.0'
+    compileOnly 'com.android.billingclient:billing:5.2.0'
 
 }
 
